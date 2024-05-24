@@ -7,8 +7,8 @@ const app = express();
 
 app.use(express.json());
 
-app.use('/api/v1', userRouter);
-app.use('/api/v1', todosRouter);
+app.use('/api/v1/user', userRouter);
+app.use('/api/v1/todos', todosRouter);
 
 
 export default app;
