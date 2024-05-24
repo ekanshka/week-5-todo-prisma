@@ -33,19 +33,23 @@
 ## Details of Things learnt/covered : 🎊
 
 <!-- - Backend : -->
-    - typescript express server
-    - users table and accounts table in mongoDB using mongoose orm
-    - zod validation for all necessary routes
-    - auth routes : 
-        - POST "api/v1/user/signup", with assigning user with random balance under 10000 
-        - POST "api/v1/user/signin", with jwt token return
-    - user routes : 
-        - GET "api/v1/user/" , fetching current user information (username, firstname, lastname)
-        - PUT "api/v1/user/" , updating their information (firstname, lastname, password with encryption)
-        - GET "api/v1/user/bulk", searching for users with or without filter query
-    - account routes :
-        - GET "api/v1/account/balance", to get their balance
-        - POST "api/v1/account/transfer", to transfer money to a another user
+- typescript express server
+- users table and accounts table in POSTGRESQL using PRISMA ORM
+- zod validation for all necessary routes
+
+- auth routes : 
+    - POST "api/v1/user/signup", creating user with empty todos array and login with jwt auth
+    - POST "api/v1/user/signin", logs in the user with jwt auth
+
+- user routes : 
+    - GET "api/v1/todos/", fetching current user's todos
+    - GET "api/v1/todos/:todoId", fetching a specific todo of the user
+    - POST "api/v1/todos/createTodo", create a new todo
+    - POST "api/v1/todos/updateTodo/:todoId", update any specific todo of the user
+    - POST "api/v1/todos/deleteTodo/:todoId", delete any specific todo of the user
+
+- test route : 
+    - GET "api/v1/todos/bulk", fetching all todos of all users (test route)
 
 
 <!-- - Frontend :
