@@ -6,7 +6,6 @@ const prisma = new PrismaClient();
 export const bulkTodos = (req:Request, res:Response) => {
     try {
         const todos = prisma.todo.findMany({});
-
         res.status(200).json({todos: todos})
 
     } catch (error) {

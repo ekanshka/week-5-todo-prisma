@@ -30,7 +30,7 @@
     - money transfer feature deducts correct user's balance and adds to correct user's account -->
 
 
-## Details of Things learnt/covered : 🎊
+## Details : 🎊
 
 <!-- - Backend : -->
 - typescript express server

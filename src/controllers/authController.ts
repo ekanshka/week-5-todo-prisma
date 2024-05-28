@@ -30,7 +30,7 @@ export const signup = async (req: Request, res: Response) => {
             }
         })
 
-        const access_token = jwt.sign(user.id.toString(), process.env.JWT_SECRET as string)
+        const access_token = jwt.sign({userId: user.id}, process.env.JWT_SECRET as string)
 
         res.status(201).json({
             msg: "User created successfully",
@@ -78,7 +78,7 @@ export const signin = async (req: Request, res: Response) => {
             return
         }
 
-        const access_token = jwt.sign(user.id.toString(), process.env.JWT_SECRET as string)
+        const access_token = jwt.sign({userId: user.id}, process.env.JWT_SECRET as string)
 
         res.status(200).json({
             msg: "Logged in successfully",
