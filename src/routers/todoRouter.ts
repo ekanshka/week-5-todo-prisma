@@ -6,6 +6,7 @@ export const todosRouter = Router();
 
 todosRouter.use(authMiddleware);
 
+// /api/v1/todos
 todosRouter.get('/', getTodos)
 todosRouter.get('/:todoId', getSpecificTodos)
 todosRouter.post('/createTodo', createTodo)

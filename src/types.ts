@@ -12,7 +12,13 @@ export const signinSchema = zod.object({
     password: zod.string().min(3),
 })
 
-export const todoCreateSchema = zod.string().min(2)
 
-export const todoUpdateSchema = zod.string().min(2)
+export const todoCreateSchema = zod.object({
+    body: zod.string().min(2)
+})
+
+export const todoUpdateSchema = zod.object({
+    body: zod.string().min(2),
+    done: zod.boolean()
+})
 
