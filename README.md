@@ -49,7 +49,7 @@
     - POST "api/v1/todos/deleteTodo/:todoId", delete any specific todo of the user
 
 - test route : 
-    - GET "api/v1/todos/bulk", fetching all todos of all users (test route)
+    - GET "api/v1/todos/bulk", fetching all todos of all users without requiring authentication (test route)
 
 
 <!-- - Frontend :
