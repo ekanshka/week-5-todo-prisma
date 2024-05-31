@@ -17,8 +17,5 @@ export const todoCreateSchema = zod.object({
     body: zod.string().min(2)
 })
 
-export const todoUpdateSchema = zod.object({
-    body: zod.string().min(2),
-    done: zod.boolean()
-})
+
 

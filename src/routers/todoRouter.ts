@@ -10,5 +10,5 @@ todosRouter.use(authMiddleware);
 todosRouter.get('/', getTodos)
 todosRouter.get('/:todoId', getSpecificTodos)
 todosRouter.post('/createTodo', createTodo)
-todosRouter.post('/updateTodo/:todoId', updateTodo)
-todosRouter.post('/deleteTodo/:todoId', deleteTodo)
+todosRouter.put('/updateTodo/:todoId', updateTodo)
+todosRouter.delete('/deleteTodo/:todoId', deleteTodo)
